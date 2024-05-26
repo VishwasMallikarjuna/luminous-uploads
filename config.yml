@@ -1,0 +1,8 @@
+dbUser: postgres-User
+dbPassword: postgres-password
+dbName: postgres-database-name
+dbHost: postgres-localhost
+dbPort: postgres-port
+clientID: Azure-clientID
+tenantID: Azure-tenantID
+secretKey: your-secret-key
