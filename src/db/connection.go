@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	_ "github.com/lib/pq"
 	"github.com/VishwasMallikarjuna/luminous-uploads/utils"
+	_ "github.com/lib/pq"
 )
 
 var DB *sql.DB
@@ -21,10 +21,10 @@ func Connect() {
 		log.Fatal("Dberror:", err)
 	}
 
-	// err = DB.Ping()
-	// if err != nil {
-	// 	log.Fatal("Dberrorerr", err)
-	// }
+	err = DB.Ping()
+	if err != nil {
+		log.Fatal("DB Ping", err)
+	}
 
 	fmt.Println("Successfully connected to the database")
 }
