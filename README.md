@@ -35,6 +35,13 @@ Generate Upload Link
     Endpoint: POST /generate-upload-link/:duration
     Description: Accepts a secret token and expiration time, and produces an expirable link to the endpoint that can be used for image upload.
     Authentication: Bearer Token
+
+    duration (string): The duration for which the upload link is valid.
+        10m for 10 minutes
+        1h for 1 hour
+        24h for 24 hours
+        7d for 7 days (Note: d is not supported by time.ParseDuration, so you'd need to convert it to hours, e.g., 168h for 7 days)
+
     Example Response:
 
 json
