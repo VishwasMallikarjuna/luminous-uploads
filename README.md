@@ -72,7 +72,33 @@ Get Image
     Authentication: Bearer Token
     Example Response: Returns the image in binary format.
 
+Get service statistics
 
+    Endpoint: GET /serviceStatistics
+    Description: returns
+        - the most popular image format;
+        - the top 10 most popular camera models;
+        - image upload frequency per day for the past 30 days.
+    Authentication: Bearer Token
+    Example Response: Returns Statistics
+
+json
+
+{
+    "most_popular_format": "formate",
+    "top_camera_models": [
+        {
+            "camera_model": "camera_model",
+            "count": count
+        }
+    ],
+    "upload_frequency": [
+        {
+            "upload_date": "upload_date",
+            "upload_count": count
+        }
+    ]
+}
 
 ## Configuration
 
