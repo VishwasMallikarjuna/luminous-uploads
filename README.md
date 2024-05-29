@@ -139,10 +139,9 @@ CONFIG_PATH=path/to/your/config.yml go run main.go
 To pull the Docker image:
 
 ```sh
-docker pull vishwasmallikarjuna/urlrepo:v0.1
-```
+docker pull vishwasmallikarjuna/urlrepo:v0.2```
 To run the Docker image:
 ```sh
-docker run -it -p 1323:1323 -v /path/of/your/local/config.yml:/app/config.yml -e CONFIG_PATH=/app/config.yml vishwasmallikarjuna/urlrepo:v0.1 /bin/sh
+docker run -it -p 1323:1323 -v /path/of/your/local/config.yml:/app/config.yml -e CONFIG_PATH=/app/config.yml vishwasmallikarjuna/urlrepo:v0.2 /bin/sh
 
 ```
