@@ -4,10 +4,10 @@ import (
 	"flag"
 	"os"
 
-	"github.com/labstack/echo"
 	"github.com/VishwasMallikarjuna/luminous-uploads/db"
 	"github.com/VishwasMallikarjuna/luminous-uploads/handlers"
 	"github.com/VishwasMallikarjuna/luminous-uploads/utils"
+	"github.com/labstack/echo"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 	utils.InitializeLogger()
 	// Load configuration using the provided file path
 	utils.LoadConfig() // Adjusted to pass the path as an argument
-	
+
 	db.Connect() // Connect to the database
 
 	e := echo.New()
@@ -30,6 +30,7 @@ func main() {
 	e.POST("/generate-upload-link/:duration", handlers.GenerateUploadLink)
 	e.POST("/upload-image", handlers.UploadImage)
 	e.GET("/image/:imageId", handlers.GetImage)
+	e.GET("/serviceStatistics", handlers.GetImageStats)
 
 	// Start the server
 	err := e.Start(":1323")
